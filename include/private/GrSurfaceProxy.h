@@ -146,7 +146,7 @@ protected:
         // anything extra.
         fTarget = surface.release();
     }
-    virtual ~GrIORefProxy() {
+    virtual ~GrIORefProxy() override {
         // We don't unref 'fTarget' here since the 'unref' method will already
         // have forwarded on the unref call that got us here.
     }
@@ -396,7 +396,7 @@ protected:
     // Wrapped version
     GrSurfaceProxy(sk_sp<GrSurface>, GrSurfaceOrigin, SkBackingFit);
 
-    virtual ~GrSurfaceProxy();
+    virtual ~GrSurfaceProxy() override;
 
     friend class GrSurfaceProxyPriv;
 

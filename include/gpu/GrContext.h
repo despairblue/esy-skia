@@ -86,7 +86,7 @@ public:
     static sk_sp<GrContext> MakeMock(const GrMockOptions*, const GrContextOptions&);
     static sk_sp<GrContext> MakeMock(const GrMockOptions*);
 
-    virtual ~GrContext();
+    virtual ~GrContext() override;
 
     sk_sp<GrContextThreadSafeProxy> threadSafeProxy();
 
@@ -364,7 +364,7 @@ private:
  */
 class SK_API GrContextThreadSafeProxy : public SkRefCnt {
 public:
-    ~GrContextThreadSafeProxy();
+    ~GrContextThreadSafeProxy() override;
 
     bool matches(GrContext* context) const { return context->uniqueID() == fContextUniqueID; }
 
