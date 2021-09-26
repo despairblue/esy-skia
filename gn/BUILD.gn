@@ -354,7 +354,6 @@ config("warnings") {
     ]
   } else {
     cflags += [
-      "-Werror",
       "-Wall",
       "-Wextra",
       "-Winit-self",
