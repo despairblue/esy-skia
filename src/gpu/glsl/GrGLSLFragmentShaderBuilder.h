@@ -22,7 +22,7 @@ class GrGLSLVarying;
 class GrGLSLFragmentBuilder : public GrGLSLShaderBuilder {
 public:
     GrGLSLFragmentBuilder(GrGLSLProgramBuilder* program) : INHERITED(program) {}
-    virtual ~GrGLSLFragmentBuilder() override {}
+    virtual ~GrGLSLFragmentBuilder() {}
 
     /**
      * This returns a variable name to access the 2D, perspective correct version of the coords in
